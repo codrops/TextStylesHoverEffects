@@ -1,0 +1,252 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700,900|Dosis:800|Playfair+Display:400,400italic,900italic|Lora:700|Syncopate:700|Roboto+Condensed:300italic|Oswald:700);
+
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*, *:after, *:before { box-sizing: border-box; }
+.clearfix:before, .clearfix:after {display: table;  content: ''; }
+.clearfix:after { clear: both; }
+
+body {
+	background: #fff;
+	color: #1e1a1b;
+	font-weight: 500;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	outline: none;
+	color: #dd3e62;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1e1a1b;
+}
+
+ a:focus {
+ 	outline: none;
+ }
+
+.hidden {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+/* Header */
+.codrops-header {
+	padding: 2em 1em 4em;
+	text-align: center;
+	height: calc(100vh - 40px);
+	margin: 20px 20px 20px;
+	overflow: hidden;
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	background: url(../img/mouse.svg) no-repeat left 50% bottom 40px;
+}
+
+.codrops-header::before,
+.codrops-header::after {
+	content: 'Lorizzleipsizzledolorcrazy amizzlefoshizzleizzleelit Nullizzlesapienvelizzle aliquetvolutpatfoshizzlefo shizzlemynizzlegravidafoshizzle Lorizzleipsizzledolorcrazy amizzlefoshizzleizzleelit Nullizzlesapienvelizzle aliquetvolutpatfoshizzlefo shizzlemynizzlegravidafoshizzle';
+	font-size: 13em;
+	line-height: 0.5;
+	letter-spacing: -15px;
+	z-index: 10;
+	text-align: justify;
+	pointer-events: none;
+	position: absolute;
+	background: #cdced2;
+	color: rgba(255,255,255,0.15);
+	font-family: 'Playfair Display', cursive;
+	font-weight: 900;
+	font-style: italic;
+	z-index: -1;
+	width: 120%;
+	height: 120%;
+	top: -10%;
+	left: -10%;
+}
+
+.codrops-header h1 {
+	margin: 0;
+	padding: 0 0 1em;
+	font-weight: 800;
+	font-size: 2.75em;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #49484a;
+}
+
+.codrops-header h1 span {
+	font-style: italic;
+	font-family: 'Playfair Display', serif;
+}
+
+.codrops-header h1 .sub {
+	display: block;
+	padding: 0.75em 0;
+	color: #F9F9F9;
+	font-weight: 400;
+	font-size: 68%;
+	text-transform: none;
+}
+
+/* Top Navigation Style */
+.codrops-links {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-flex: none;
+	flex: none;
+}
+
+.codrops-links::after {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: #fff;
+	content: '';
+	-webkit-transform: rotate3d(0,0,1,22.5deg);
+	transform: rotate3d(0,0,1,22.5deg);
+}
+
+.codrops-icon {
+	display: inline-block;
+	margin: 15px;
+	text-decoration: none;
+}
+
+.codrops-icon span {
+	display: none;
+}
+
+.codrops-icon:before {
+	margin: 0 5px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon--drop:before {
+	content: "\e001";
+}
+
+.codrops-icon--prev:before {
+	content: "\e004";
+}
+
+/* Grid */
+.grid__item {
+	height: calc(100vh - 40px);
+	min-height: 460px;
+	max-width: calc(100vw - 40px);
+	background: #DDD;
+	margin: 20px;
+	padding: 100px 0;
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-transform: translate3d(0,0,0); /* Solves Safari bug because of SVG clipping mask */
+}
+
+.grid__item p {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #777;
+}
+
+/* Background colors */
+.color-1 { background: #E8E0DA; }
+.color-2 { background: #576b67; }
+.color-3 { background: #383A35; }
+.color-4 { background: #333; }
+.color-5 { background: #fda9a9; }
+.color-7 { background: #cde7d3; }
+.color-8 { background: #DCECDD; }
+.color-9 { background: #dedbba; }
+.color-10 { background: #222; }
+.color-11 { background: #515151; }
+
+/* Related demos */
+.content--related {
+	padding: 3em 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+.media-item {
+	display: inline-block;
+	padding: 1em;
+	vertical-align: top;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.media-item__img {
+	max-width: 100%;
+	opacity: 0.3;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.media-item:hover .media-item__img,
+.media-item:focus .media-item__img {
+	opacity: 1;
+}
+
+.media-item__title {
+	margin: 0;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+@media screen and (max-width: 50em) {
+	.codrops-header {
+		padding: 3em 10% 4em;
+	}
+	.grid__item {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.codrops-header h1 {
+		font-size: 1.85em;
+	}
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inspiration for Text Styles and Hover Effects</title>
+	<meta name="description" content="A set of modern text styles and hover effects for your inspiration" />
+	<meta name="keywords" content="text style, link style, link hover, effect, animation, inspiration, web design" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/linkstyles.css" />
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style> /* Firefox seems to have issues loading the clip path from inside the CSS */
+		.link--urpi::before {
+			-webkit-clip-path: url(#cp_up); 
+			clip-path: url(#cp_up);
+		}
+
+		.link--urpi::after {
+			-webkit-clip-path: url(#cp_down); 
+			clip-path: url(#cp_down);
+		}
+	</style>
+</head>
+
+<body>
+	<!-- clipping mask for style "Urpi" -->
+	<svg class="hidden" viewBox="0 0 310 160">
+		<defs>
+			<clippath id="cp_up">
+				<polygon id="cp_poly_up" points="0,0 310,0 310,160" />
+			</clippath>
+			<clippath id="cp_down">
+				<polygon id="cp_poly_down" points="0,0 0,160 310,160" />
+			</clippath>
+		</defs>
+	</svg>
+	<!-- SVG for effect "Asiri" -->
+	<!-- Inverted masking technique by Yoksel http://tympanus.net/codrops/2015/02/16/create-animated-text-fills/ -->
+	<svg class="hidden svg--asiri" viewBox="0 0 400 200">
+		<!-- Symbol with text -->
+		<symbol id="s-text">
+			<text text-anchor="middle" x="50%" y="50%" dy="0.35em" textLength="280" class="text--asiri">Asiri</text>
+		</symbol>
+		<!-- Mask with text -->
+		<mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+			<rect width="100%" height="100%" class="mask__shape">
+			</rect>
+			<use xlink:href="#s-text" class="mask__text"></use>
+		</mask>
+	</svg>
+	<div class="container">
+		<header class="codrops-header">
+			<div class="codrops-links">
+				<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/PhotographyWebsiteConcept/" title="Previous Demo"><span>Previous Demo</span></a>
+				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=24024" title="Back to the article"><span>Back to the Codrops article</span></a>
+			</div>
+			<h1><span class="sub">Inspiration for</span> Text Styles <span class="amp">&amp;</span> Hover Effects</h1>
+		</header>
+		<div class="grid">
+			<div class="grid__item color-1">
+				<a class="link link--kukuri" href="#" data-letters="Kukuri">Kukuri</a>
+			</div>
+			<div class="grid__item">
+				<a class="link link--takiri" href="#">Takiri <span>Where do you want to be?</span></a>
+			</div>
+			<div class="grid__item color-2">
+				<a class="link link--surinami" href="#"><span data-letters-l="Suri" data-letters-r="nami">Surinami</span></a>
+			</div>
+			<div class="grid__item color-3">
+				<a class="link link--nukun" href="#">Nu<span>k</span>un</a>
+			</div>
+			<div class="grid__item color-4">
+				<a class="link link--kumya" href="#"><span data-letters="Kumya">Kumya</span></a>
+			</div>
+			<div class="grid__item color-8">
+				<a class="link link--manko" href="#">Manko <span>one step</span> <span>at a time</span></a>
+			</div>
+			<div class="grid__item color-11">
+				<a class="link link--yaku" href="#">
+					<span>Y</span><span>a</span><span>k</span><span>u</span>					
+				</a>
+			</div>
+			<div class="grid__item color-7">
+				<a class="link link--mallki" href="#">Mallki<span data-letters="Mallki"></span><span data-letters="Mallki"></span></a>
+			</div>
+			<div class="grid__item color-9">
+				<a class="link link--ilin" href="#"><span>Il</span><span>in</span></a>
+			</div>
+			<div class="grid__item">
+				<p>The next effects only work in Firefox and Chrome.</p>
+			</div>
+			<div class="grid__item color-5">
+				<a class="link link--urpi" href="#" data-letters="Urpi">Urpi</a>
+			</div>
+			<div class="grid__item color-10">
+				<a class="link link--asiri" href="#">
+					<!-- Content for text -->
+					<div class="text-fill">
+						<canvas id="canv"></canvas>
+					</div>
+					<!-- SVG to cover text fill -->
+					<svg viewBox="0 0 400 200" class="svg-inverted-mask">
+						<!-- Big shape with hole in form of text -->
+						<rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+						<!-- Transparent copy of text to keep
+							 patterned text selectable -->
+						<use xlink:href="#s-text" class="text--transparent"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<!-- Related demos -->
+		<section class="content content--related">
+			<p>If you enjoyed this demo you might also like:</p>
+			<a class="media-item" href="http://tympanus.net/Development/CreativeLinkEffects/">
+				<img class="media-item__img" src="img/related/CreativeLinkEffects.png">
+				<h3 class="media-item__title">Creative Link Effects</h3>
+			</a>
+			<a class="media-item" href="http://tympanus.net/Tutorials/CaptionHoverEffects/">
+				<img class="media-item__img" src="img/related/CaptionHoverEffect.png">
+				<h3 class="media-item__title">Caption Hover Effects</h3>
+			</a>
+		</section>
+	</div>
+	<!-- /container -->
+	<!-- Jolt by Tiffany Rayside: http://codepen.io/tmrDevelops/pen/dPjYYP/ -->
+	<script>
+		window.requestAnimFrame = (function(callback) {
+			return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+				function(callback) {
+					window.setTimeout(callback, 1000 / 60);
+				};
+		})();
+
+		var requestId, jolttime;
+
+		var c = document.getElementById('canv');
+		var $ = c.getContext('2d');
+
+		var s = 18; //grid square size
+		var mv = 10; //moving areas
+		var sp = 1; //move speed
+		var clm = 23; //columns
+		var rw = 10; //rows
+		var x = []; //x array
+		var y = []; //y array
+		var X = []; //starting X array
+		var Y = []; //starting Y array
+
+		c.width  = c.offsetWidth;
+		c.height = c.offsetHeight;
+
+		for (var i = 0; i < clm * rw; i++) {
+			x[i] = ((i % clm) - 0.5) * s;
+			y[i] = (Math.floor(i / clm) - 0.5) * s;
+			X[i] = x[i];
+			Y[i] = y[i];
+		}
+		var t = 0;
+
+		function jolt() {
+			$.fillRect(0, 0, c.width, c.height);
+
+			for (var i = 0; i < clm * rw; i++) {
+				if (i % clm != clm - 1 && i < clm * (rw - 1) - 1) {
+					$.fillStyle = "hsla(0,0,0,1)";
+					$.strokeStyle = "#95D384";
+					$.lineWidth = 1;
+					$.beginPath();
+					$.moveTo(x[i], y[i]);
+					$.lineTo(x[i + 1], y[i + 1]);
+					$.lineTo(x[i + clm + 1], y[i + clm + 1]);
+					$.lineTo(x[i + clm], y[i + clm]);
+					$.closePath();
+					$.stroke();
+					$.fill();
+				}
+			}
+			for (var i = 0; i < rw * clm; i++) {
+				if ((x[i] < X[i] + mv) && (x[i] > X[i] - mv) && (y[i] < Y[i] + mv) && (y[i] > Y[i] - mv)) {
+					x[i] = x[i] + Math.floor(Math.random() * (sp * 2 + 1)) - sp;
+					y[i] = y[i] + Math.floor(Math.random() * (sp * 2 + 1)) - sp;
+				} else if (x[i] >= X[i] + mv) {
+					x[i] = x[i] - sp;
+				} else if (x[i] <= X[i] - mv) {
+					x[i] = x[i] + sp;
+				} else if (y[i] >= Y[i] + mv) {
+					y[i] = y[i] - sp;
+				} else if (y[i] <= Y[i] + mv) {
+					y[i] = y[i] + sp;
+				}
+			}
+			//controls time of electric shake> when counter equals 0, it will reset for 5s then start again.
+			if (t % c.width == 0) {
+				jolttime = setTimeout('jolt()', 5);
+				t++;
+			} else {
+				jolttime = setTimeout('jolt()', 5);
+				t++;
+			}
+		}
+
+		function start() {
+			if (!requestId) {
+				requestId = window.requestAnimFrame(jolt);
+			}
+		}
+
+		function stop() {
+			if (requestId) {
+				clearTimeout(jolttime);
+				window.cancelAnimationFrame(requestId);
+				requestId = undefined;
+			}
+		}
+
+		document.querySelector('a.link--asiri').addEventListener('mouseenter', start);
+		document.querySelector('a.link--asiri').addEventListener('mouseleave', stop);
+	</script>
+	<script>
+		// For Demo purposes only (show hover effect on mobile devices)
+		[].slice.call( document.querySelectorAll('.grid a') ).forEach( function(el) {
+			el.onclick = function() { return false; }
+		} );
+	</script>
+</body>
+
+</html>
